@@ -40,7 +40,7 @@ export default function Home() {
       });
       setOutput(response.data.choices[0].message.content.trim());
       console.log(response.data.choices[0].message.content.trim());
-      // const aaa = await axios.post('./api/saveInput', { input });
+      const aaa = await axios.post('./api/saveInput', { input });
       
     } catch (error) {
       console.error('Error:', error);
