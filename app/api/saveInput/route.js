@@ -11,7 +11,7 @@ export async function POST(request) {
 const filePath = path.join(__dirname, 'output.txt');
 
     // Write the input to the file
-    fs.appendFileSync(filePath,"---"+ input, 'utf8');
+    fs.appendFileSync("./output.txt","---"+ input, 'utf8');
     return NextResponse.json({ message: 'Input saved successfully' }, { status: 200 });
   } catch (error) {
     console.error(error);
