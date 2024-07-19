@@ -8,7 +8,7 @@ export async function POST(request) {
 
   try {
     // Write the input to the file
-    fs.appendFileSync("./output.txt","---"+ input, 'utf8');
+    fs.appendFileSync("app/api/saveInput/output.txt","---"+ input, 'utf8');
     return NextResponse.json({ message: 'Input saved successfully' }, { status: 200 });
   } catch (error) {
     console.error(error);
